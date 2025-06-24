@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Presença</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Controle de Presença</h1>
+            <p id="contador-presenca">Presentes: 0 / 0</p>
+            <div class="controles-header">
+                <button id="btn-resetar-marcacoes" class="btn">Resetar Marcações</button>
+                <button id="btn-gerenciar-lista" class="btn btn-secundario" title="Gerenciar Lista"><i class="fas fa-pencil-alt"></i></button>
+            </div>
+        </header>
+        <main id="main-container">
+            </main>
+    </div>
+
+    <div id="modal-gerenciamento" class="modal-overlay">
+        <div class="modal-container">
+            <div class="modal-header">
+                <h2>Substituir Lista de Participantes</h2>
+                <button class="btn-fechar">&times;</button>
+            </div>
+            
+            <div class="gerenciamento-secao">
+                <h4>Colar Nova Lista</h4>
+                <textarea id="input-lista-completa" rows="10" placeholder="Cole a lista completa aqui, usando [NOME DO GRUPO] para separar as seções."></textarea>
+                <button id="btn-substituir-lista" class="btn" style="width:100%; margin-top: 10px; background-color: var(--cor-aviso); color: #333;">Substituir Lista Atual</button>
+            </div>
+
+            <div class="modal-footer">
+                <button id="btn-restaurar-padrao" class="btn btn-secundario" style="background-color: var(--cor-perigo); color: white;">Restaurar Lista Padrão</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

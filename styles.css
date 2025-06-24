@@ -1,0 +1,155 @@
+:root {
+    --cor-fundo: #f0f2f5;
+    --cor-container: #ffffff;
+    --cor-texto: #333;
+    --cor-borda: #ddd;
+    --cor-cabecalho: #007bff;
+    --cor-presente: #28a745;
+    --cor-texto-branco: #fff;
+    --cor-padrao: #f8f9fa;
+    --cor-texto-padrao: #343a40;
+    --cor-perigo: #dc3545;
+    --cor-aviso: #ffc107;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--cor-fundo);
+    margin: 0;
+    padding: 1rem;
+}
+.app-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    background-color: var(--cor-container);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+header {
+    background-color: var(--cor-cabecalho);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+header h1 { margin: 0; font-size: 1.5rem; }
+header p { margin: 0.5rem 0 1rem; font-size: 1.1rem; font-weight: 500; }
+.controles-header {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.btn {
+    background-color: #fff;
+    color: var(--cor-cabecalho);
+    border: none;
+    padding: 0.7rem 1.2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.btn:hover { transform: scale(1.05); }
+.btn.btn-secundario {
+     background-color: rgba(255, 255, 255, 0.2);
+     border: 1px solid white;
+     color: white;
+     width: 45px;
+     height: 45px;
+     padding: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.btn.btn-secundario i {
+    font-size: 1.1rem;
+}
+main { padding: 1.5rem; }
+.grupo-participantes h2 {
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--cor-cabecalho);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.grupo-participantes h3 {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 1.5rem;
+    margin-bottom: 0.8rem;
+}
+.lista-participantes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    min-height: 20px;
+}
+.participante-btn {
+    background-color: var(--cor-padrao);
+    color: var(--cor-texto-padrao);
+    border: 1px solid var(--cor-borda);
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    user-select: none;
+}
+.participante-btn.presente { 
+    background-color: var(--cor-presente); 
+    color: var(--cor-texto-branco); 
+    border-color: var(--cor-presente);
+    font-weight: bold;
+}
+.oculto { display: none; }
+
+/* Estilos do Modal de Gerenciamento */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 1rem;
+}
+.modal-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+.modal-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 1rem; margin-bottom: 1rem; }
+.modal-header h2 { margin: 0; }
+.modal-header .btn-fechar { font-size: 2rem; font-weight: bold; cursor: pointer; background: none; border: none; }
+.gerenciamento-secao {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+.gerenciamento-secao:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+.gerenciamento-secao h4 { margin-top: 0; margin-bottom: 1rem; }
+.gerenciamento-secao textarea { 
+    width: 100%; 
+    padding: 0.8rem; 
+    border-radius: 5px; 
+    border: 1px solid var(--cor-borda); 
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+}
+.modal-footer { margin-top: 2rem; border-top: 1px solid #eee; padding-top: 1rem; text-align: center; }
