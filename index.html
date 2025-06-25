@@ -15,7 +15,7 @@
             <p id="contador-presenca">Presentes: 0 / 0</p>
             <div class="controles-header">
                 <button id="btn-resetar-marcacoes" class="btn">Resetar Marcações</button>
-                <button id="btn-gerenciar-lista" class="btn btn-secundario" title="Gerenciar Lista"><i class="fas fa-pencil-alt"></i></button>
+                <button id="btn-gerenciar-lista" class="btn btn-icon" title="Gerenciar Lista"><i class="fas fa-pencil-alt"></i></button>
             </div>
         </header>
         <main id="main-container">
@@ -31,12 +31,12 @@
             
             <div class="gerenciamento-secao">
                 <h4>Colar Nova Lista</h4>
-                <textarea id="input-lista-completa" rows="10" placeholder="Cole a lista completa aqui, usando [NOME DO GRUPO] para separar as seções."></textarea>
+                <textarea id="input-lista-completa" rows="10" placeholder="Cole a lista completa aqui. Use [NOME DO GRUPO] para separar as seções. Nomes sem um cabeçalho acima ficarão em 'Sem Grupo'."></textarea>
                 <button id="btn-substituir-lista" class="btn" style="width:100%; margin-top: 10px; background-color: var(--cor-aviso); color: #333;">Substituir Lista Atual</button>
             </div>
 
             <div class="modal-footer">
-                <button id="btn-restaurar-padrao" class="btn btn-secundario" style="background-color: var(--cor-perigo); color: white;">Restaurar Lista Padrão</button>
+                <button id="btn-restaurar-padrao" class="btn btn-perigo">Restaurar Lista Padrão</button>
             </div>
         </div>
     </div>
