@@ -52,7 +52,8 @@ header p { margin: 0.5rem 0 1rem; font-size: 1.1rem; font-weight: 500; }
     transition: all 0.2s;
 }
 .btn:hover { transform: scale(1.05); }
-.btn.btn-secundario {
+/* MUDANÇA: Renomeado de .btn-secundario para .btn-icon */
+.btn.btn-icon {
      background-color: rgba(255, 255, 255, 0.2);
      border: 1px solid white;
      color: white;
@@ -63,7 +64,12 @@ header p { margin: 0.5rem 0 1rem; font-size: 1.1rem; font-weight: 500; }
      align-items: center;
      justify-content: center;
 }
-.btn.btn-secundario i {
+/* MUDANÇA: Nova classe para o botão de restaurar */
+.btn.btn-perigo {
+    background-color: var(--cor-perigo);
+    color: white;
+}
+.btn.btn-icon i {
     font-size: 1.1rem;
 }
 main { padding: 1.5rem; }
@@ -72,6 +78,9 @@ main { padding: 1.5rem; }
     border-bottom: 2px solid var(--cor-cabecalho);
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
+}
+.grupo-participantes:not(.oculto) + .grupo-participantes:not(.oculto) {
+    margin-top: 2rem;
 }
 .grupo-participantes h3 {
     font-size: 1.1rem;
